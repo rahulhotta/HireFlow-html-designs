@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireFlow Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <!-- LEFT -->
+                <div class="top-left">
+                    <div class="brand">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>HireFlow</span>
+                    </div>
+
+                    <nav class="top-nav">
+                        <a class="active">Dashboard</a>
+                        <a>Recommended Jobs</a>
+                    </nav>
+                </div>
+
+                <!-- CENTER -->
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input placeholder="Search jobs..." />
+                </div>
+
+                <!-- RIGHT -->
+                <div class="top-actions">
+                    <i class="fa-regular fa-bell"></i>
+                    <img src="https://i.pravatar.cc/40" />
+                </div>
+
+            </header>
+
+            <!-- CONTENT -->
+            <section class="content">
+
+                <h1>Welcome back, Alex! 👋</h1>
+                <p class="sub">You have 4 new job alerts today.</p>
+
+                <div class="grid-top">
+
+                    <!-- CHART -->
+                    <div class="card">
+                        <h3>Application Activity</h3>
+
+                        <svg viewBox="0 0 600 220" class="chart">
+                            <defs>
+                                <linearGradient id="fade" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25" />
+                                    <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+
+                            <path d="M0 140 C 80 90, 160 80, 240 110
+                 C 300 60, 360 40, 420 80
+                 C 480 120, 540 160, 600 180" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+
+                            <path d="M0 140 C 80 90, 160 80, 240 110
+                 C 300 60, 360 40, 420 80
+                 C 480 120, 540 160, 600 180
+                 L600 220 L0 220 Z" fill="url(#fade)" />
+                        </svg>
+                    </div>
+
+                    <!-- profile -->
+                    <div class="profile-card">
+                        <h2>Complete Your Profile</h2>
+                        <p>Your profile is <strong>70%</strong> complete</p>
+
+                        <div class="progress">
+                            <div class="bar" style="width:70%"></div>
+                        </div>
+
+                        <ul class="checklist">
+                            <li class="done">✔ Resume uploaded</li>
+                            <li class="done">✔ Skills added</li>
+                            <li>✖ Portfolio missing</li>
+                        </ul>
+
+                        <button>Complete Profile</button>
+                    </div>
+
+
+                </div>
+
+                <!-- JOBS -->
+                <h2 class="section-title">Recommended Jobs</h2>
+
+                <div class="jobs">
+
+                    <!-- JOB CARD -->
+                    <div class="job-card">
+                        <div class="job-top">
+                            <div class="company-logo netflix">N</div>
+                            <i class="fa-regular fa-bookmark bookmark"></i>
+                        </div>
+
+                        <h4>Senior Product Designer</h4>
+                        <p class="company">Linear</p>
+
+                        <div class="tags">
+                            <span>Design System</span>
+                            <span>UI/UX</span>
+                            <span>Figma</span>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="job-meta">
+                            <div class="left">
+                                <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                                <span class="salary">$140k - $180k</span>
+                            </div>
+
+                            <div class="right">
+                                <span class="time">2h ago</span>
+                                <span class="badge">FULL-TIME</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JOB CARD -->
+                    <div class="job-card">
+                        <div class="job-top">
+                            <div class="company-logo gray">
+                                <i class="fa-regular fa-image"></i>
+                            </div>
+                            <i class="fa-regular fa-bookmark bookmark"></i>
+                        </div>
+
+                        <h4>Frontend Engineer (React)</h4>
+                        <p class="company">Vercel</p>
+
+                        <div class="tags">
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>Tailwind</span>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="job-meta">
+                            <div class="left">
+                                <span><i class="fa-solid fa-location-dot"></i> San Francisco, CA</span>
+                                <span class="salary">$160k - $210k</span>
+                            </div>
+
+                            <div class="right">
+                                <span class="time">5h ago</span>
+                                <span class="badge">FULL-TIME</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JOB CARD -->
+                    <div class="job-card">
+                        <div class="job-top">
+                            <div class="company-logo green">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <i class="fa-regular fa-bookmark bookmark"></i>
+                        </div>
+
+                        <h4>Backend Developer</h4>
+                        <p class="company">Stripe</p>
+
+                        <div class="tags">
+                            <span>Go</span>
+                            <span>Kubernetes</span>
+                            <span>AWS</span>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="job-meta">
+                            <div class="left">
+                                <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                                <span class="salary">$150k - $200k</span>
+                            </div>
+
+                            <div class="right">
+                                <span class="time">1d ago</span>
+                                <span class="badge">FULL-TIME</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f7f9fc;
+}
+
+.main {
+  width: 100%;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.brand i {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.top-nav a {
+  margin-right: 20px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.top-nav a.active {
+  color: #2563eb;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 14px;
+  width: 320px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 10px;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.top-actions img {
+  border-radius: 50%;
+}
+
+/* CONTENT */
+.content {
+  padding: 30px;
+}
+
+.sub {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.grid-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.chart {
+  width: 100%;
+  height: 220px;
+}
+
+/* UPGRADE */
+.profile-card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-card h2 {
+  margin: 0;
+}
+
+.progress {
+  background: #e5e7eb;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.checklist li {
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.checklist li.done {
+  color: #16a34a;
+}
+
+.profile-card button {
+  margin-top: auto;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* JOBS */
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.job-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+}
+
+/* TOP */
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  font-size: 18px;
+}
+
+.netflix {
+  background: #111;
+}
+
+.gray {
+  background: #f1f5f9;
+  color: #6b7280;
+}
+
+.green {
+  background: #22c55e;
+}
+
+.bookmark {
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+/* TEXT */
+.job-card h4 {
+  margin: 14px 0 4px;
+  font-size: 16px;
+}
+
+.company {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* TAGS */
+.tags {
+  margin: 14px 0;
+}
+
+.tags span {
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 16px 0;
+}
+
+/* META */
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.job-meta .left span {
+  display: block;
+  margin-bottom: 4px;
+  color: #6b7280;
+}
+
+.salary {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.time {
+  color: #9ca3af;
+  font-size: 12px;
+  display: block;
+  text-align: right;
+}
+
+.badge {
+  margin-top: 4px;
+  display: inline-block;
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
