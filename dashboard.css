@@ -1,25 +1,100 @@
+/* =========================
+   RESET & BASE
+========================= */
 * {
   box-sizing: border-box;
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   margin: 0;
   background: #f7f9fc;
+  color: #111827;
 }
 
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.sidebar-brand i {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidebar-nav a.active {
+  background: #2563eb;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.sidebar-footer a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN
+========================= */
 .main {
-  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-/* TOPBAR */
+/* =========================
+   TOP BAR
+========================= */
 .topbar {
+  height: 72px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 30px;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
 }
 
 .top-left {
@@ -56,6 +131,7 @@ body {
 .search {
   display: flex;
   align-items: center;
+  gap: 10px;
   background: #f1f5f9;
   padding: 12px 16px;
   border-radius: 14px;
@@ -66,7 +142,7 @@ body {
   border: none;
   outline: none;
   background: transparent;
-  margin-left: 10px;
+  width: 100%;
 }
 
 .top-actions {
@@ -76,10 +152,14 @@ body {
 }
 
 .top-actions img {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 }
 
-/* CONTENT */
+/* =========================
+   CONTENT
+========================= */
 .content {
   padding: 30px;
 }
@@ -89,7 +169,9 @@ body {
   margin-bottom: 30px;
 }
 
-/* GRID */
+/* =========================
+   TOP GRID
+========================= */
 .grid-top {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -97,6 +179,9 @@ body {
   margin-bottom: 40px;
 }
 
+/* =========================
+   CHART CARD
+========================= */
 .card {
   background: white;
   border-radius: 20px;
@@ -104,12 +189,18 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
+.card h3 {
+  margin-bottom: 16px;
+}
+
 .chart {
   width: 100%;
   height: 220px;
 }
 
-/* UPGRADE */
+/* =========================
+   PROFILE CARD
+========================= */
 .profile-card {
   background: white;
   border-radius: 24px;
@@ -117,18 +208,17 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .profile-card h2 {
-  margin: 0;
+  margin-bottom: 6px;
 }
 
 .progress {
+  height: 10px;
   background: #e5e7eb;
   border-radius: 10px;
-  height: 10px;
-  overflow: hidden;
+  margin: 10px 0 16px;
 }
 
 .bar {
@@ -140,11 +230,11 @@ body {
 .checklist {
   list-style: none;
   padding: 0;
-  margin: 0;
-  font-size: 14px;
+  margin: 0 0 20px;
 }
 
 .checklist li {
+  font-size: 14px;
   color: #6b7280;
   margin-bottom: 6px;
 }
@@ -155,37 +245,38 @@ body {
 
 .profile-card button {
   margin-top: auto;
+  border: none;
   background: #2563eb;
   color: white;
-  border: none;
   padding: 14px;
   border-radius: 14px;
   font-weight: 600;
   cursor: pointer;
 }
 
+/* =========================
+   JOBS SECTION
+========================= */
+.section-title {
+  margin-bottom: 20px;
+}
 
-/* JOBS */
 .jobs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-/* CARD */
+/* =========================
+   JOB CARD
+========================= */
 .job-card {
   background: white;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease;
 }
 
-.job-card:hover {
-  transform: translateY(-4px);
-}
-
-/* TOP */
 .job-top {
   display: flex;
   justify-content: space-between;
@@ -201,7 +292,7 @@ body {
   justify-content: center;
   font-weight: 700;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .netflix {
@@ -209,7 +300,7 @@ body {
 }
 
 .gray {
-  background: #f1f5f9;
+  background: #e5e7eb;
   color: #6b7280;
 }
 
@@ -222,10 +313,8 @@ body {
   cursor: pointer;
 }
 
-/* TEXT */
 .job-card h4 {
   margin: 14px 0 4px;
-  font-size: 16px;
 }
 
 .company {
@@ -257,7 +346,6 @@ body {
 .job-meta {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   font-size: 13px;
 }
 
@@ -275,12 +363,9 @@ body {
 .time {
   color: #9ca3af;
   font-size: 12px;
-  display: block;
-  text-align: right;
 }
 
 .badge {
-  margin-top: 4px;
   display: inline-block;
   background: #dcfce7;
   color: #16a34a;
@@ -289,4 +374,3 @@ body {
   font-size: 11px;
   font-weight: 600;
 }
-
